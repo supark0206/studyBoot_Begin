@@ -1,4 +1,4 @@
-package domain;
+package com.example.studyBoot.domain;
 
 public class Member {
 

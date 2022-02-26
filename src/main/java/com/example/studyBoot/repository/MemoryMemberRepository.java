@@ -1,9 +1,12 @@
-package repository;
+package com.example.studyBoot.repository;
 
-import domain.Member;
+import com.example.studyBoot.domain.Member;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+//@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long,Member> store = new HashMap<>();

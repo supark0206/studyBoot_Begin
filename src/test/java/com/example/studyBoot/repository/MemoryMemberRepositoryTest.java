@@ -1,15 +1,10 @@
 package com.example.studyBoot.repository;
 
-import domain.Member;
-import org.assertj.core.api.Assertions;
+import com.example.studyBoot.domain.Member;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
-import repository.MemberRepository;
-import repository.MemoryMemberRepository;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
 
