@@ -1,20 +1,26 @@
 package com.example.studyBoot.service;
 
 import com.example.studyBoot.domain.Member;
+import com.example.studyBoot.repository.MemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import com.example.studyBoot.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.*;
 
-
+@SpringBootTest
+@Transactional //테스트를 실행핼때 실행되서 테스트가 끝나면 롤백되게해준다
 public class MemberServiceTest {
 
-    MemberService memberService;
-    MemoryMemberRepository memoryMemberRepository;
+    @Autowired MemberService memberService;
+    @Autowired MemberRepository memberRepository;
     
+/*
     //테스트하기전마다 실행되는 코드
     @BeforeEach
     public void beforeEach(){
@@ -25,17 +31,20 @@ public class MemberServiceTest {
         memberService = new MemberService(memoryMemberRepository);
     }
 
-    /**
+    */
+/**
      *  이렇게하면 MemoryMemberRepository memberRepository = new MemoryMemberRepository();
      * MemberSercive에서 만든 MemoryMemberRepository() 와는 다른게되버림 새로운 객체이기때문
      *
-     */
+     *//*
+
 
 
     @AfterEach
     public void afterEach(){
         memoryMemberRepository.clearStore();
     }
+*/
 
 
     @Test

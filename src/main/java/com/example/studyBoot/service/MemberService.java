@@ -4,6 +4,7 @@ import com.example.studyBoot.domain.Member;
 import com.example.studyBoot.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +13,7 @@ import java.util.Optional;
 //ctrl + shift + t 로 테스트 생성 가능
 //@Service //스프링 컨테이너에 MemberService를 등록
 
+@Transactional //jpa 를 사용할때는 꼭  서비스에 추가해준다 데이터가 변경될때 꼭 추가
 public class MemberService {
 
     private final MemberRepository memberRepository;
